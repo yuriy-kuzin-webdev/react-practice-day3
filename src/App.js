@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Container, Stack } from "react-bootstrap";
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
+import UncategorizedBudgetCard from './components/UncategorizedBudgetCard'
 
 import BudgetCard from "./components/BudgetCard";
 import { useBudget } from "./contexts/BudgetsContext";
@@ -56,6 +57,7 @@ const App = () => {
               ></BudgetCard>
             );
           })}
+          <UncategorizedBudgetCard/>
         </div>
       </Container>
       <AddBudgetModal
