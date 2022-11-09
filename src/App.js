@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Button, Container, Stack } from "react-bootstrap";
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
-import UncategorizedBudgetCard from './components/UncategorizedBudgetCard'
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 
 import BudgetCard from "./components/BudgetCard";
 import { useBudget } from "./contexts/BudgetsContext";
+import TotalBudgetCard from "./components/TotalBudgetCard";
 
 const App = () => {
   const [showBudgetModal, setShowAddBudgetModal] = useState(false);
@@ -57,7 +58,8 @@ const App = () => {
               ></BudgetCard>
             );
           })}
-          <UncategorizedBudgetCard/>
+          <UncategorizedBudgetCard />
+          <TotalBudgetCard />
         </div>
       </Container>
       <AddBudgetModal
