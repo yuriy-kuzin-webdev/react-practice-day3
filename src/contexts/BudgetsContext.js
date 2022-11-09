@@ -50,7 +50,7 @@ export const BudgetsProvider = ({ children }) => {
         deleteExpense,
       }}
     >
-      children
+      {children}
     </BudgetsContext.Provider>
   );
 };
